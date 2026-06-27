@@ -7,7 +7,6 @@ export default function Shop() {
   const [productList, setProductList] = useState([]);
   const [cart, setCart] = useOutletContext();
 
-  console.log(cart);
   useEffect(() => {
     let ignore = false;
 

@@ -34,6 +34,7 @@ a {
 .cartSize {
   font-size: 1rem;
   font-style: none;
+  font-style: normal;
   padding: 0.5rem;
   margin: -0.5rem;
   border-radius: var(--btn-radius);
