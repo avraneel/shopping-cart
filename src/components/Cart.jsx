@@ -1,6 +1,9 @@
+import { useOutletContext } from "react-router";
 import styles from "../styles/Cart.module.css";
 
 export default function Cart() {
+  const [cart, setCart] = useOutletContext();
+
   return (
     <>
       <div className={styles.cart}>
