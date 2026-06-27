@@ -13,7 +13,6 @@ export default function Shop() {
     async function startFetching() {
       const fetchedItems = await getData();
       if (!ignore) {
-        console.log(fetchedItems);
         setProductList(fetchedItems);
       }
     }

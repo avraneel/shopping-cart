@@ -46,13 +46,17 @@ th {
 .itemList {
   composes: cartComponent;
   grid-area: itemList;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
 }
 
 .bill {
   composes: cartComponent;
   grid-area: bill;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .checkout {

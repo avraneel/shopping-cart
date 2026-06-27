@@ -10,10 +10,27 @@ export default function Card({ item, state, setState }) {
     const formData = new FormData(form);
     const qty = formData.get("qty");
 
-    setState([
-      ...state,
-      { id: item.id, name: item.title, qty: qty, price: item.price },
-    ]);
+    const idArray = state.map((product) => product.id);
+
+    console.log(idArray);
+    if (idArray.indexOf(item.id) < 0) {
+      // item not present in array, add it
+      setState([
+        ...state,
+        { id: item.id, name: item.title, qty: qty, price: item.price },
+      ]);
+    } else {
+      console.log("else block");
+      const updatedProducts = state.map((p) => {
+        if (item.id === p.id) {
+          // we find the repeated product
+          return { ...p, qty: Number(p.qty) + Number(qty) };
+        } else {
+          return p;
+        }
+      });
+      setState(updatedProducts);
+    }
   }
 
   return (

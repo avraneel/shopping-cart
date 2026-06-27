@@ -11,11 +11,15 @@ export default function Navbar() {
 
   const [cart, setCart] = useState([]);
 
+  const totalQty = cart
+    .map((p) => Number(p.qty))
+    .reduce((acc, cv) => acc + cv, 0);
+
   let cartNavComponent =
     cart.length > 0 ? (
       <>
         <span className={styles.cartWithSize}>Cart</span>
-        <span className={styles.cartSize}>{cart.length}</span>
+        <span className={styles.cartSize}>{totalQty}</span>
       </>
     ) : (
       <span className={styles.cartWithoutSize}>Cart</span>
