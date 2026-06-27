@@ -1,0 +1,48 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img,
+picture,
+canvas,
+svg,
+source {
+  display: block;
+  max-width: 100%;
+}
+
+:root {
+  --light-red: hsla(0, 48%, 80%, 0.35);
+  --red: #ff4444;
+  --white: #fafafa;
+  --silver: #cccccc;
+  --carbon-black: #1b1b1b;
+  --btn-txt-color: #fafafa;
+  --btn-radius: 10px;
+  --cart-btn-hover-color: #1b2e1b;
+  --card-radius: 20px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}

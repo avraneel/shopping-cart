@@ -1,0 +1,13 @@
+.cartBtn {
+  padding: 1rem;
+  border: none;
+  background-color: transparent;
+  border-radius: var(--btn-radius);
+  align-self: flex-end;
+}
+
+.cartBtn:hover {
+  cursor: pointer;
+  background-color: var(--light-red);
+  transition: 300ms;
+}

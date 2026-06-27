@@ -1,0 +1,53 @@
+.cart {
+  padding: 2rem;
+  background-color: var(--silver);
+}
+
+.cartBody {
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-areas:
+    "itemList itemList bill"
+    "itemList itemList bill"
+    "itemList itemList checkout"
+    "itemList itemList space"
+    "itemList itemList space";
+}
+
+.cartComponent {
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: var(--btn-radius);
+}
+
+.space {
+  grid-area: space;
+}
+
+.itemList {
+  composes: cartComponent;
+  grid-area: itemList;
+}
+
+.bill {
+  composes: cartComponent;
+  grid-area: bill;
+}
+
+.checkout {
+  border: none;
+  grid-area: checkout;
+  border-radius: 25px;
+  padding: 1.8rem 5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--white);
+  background-color: var(--carbon-black);
+}
+
+.checkout:hover {
+  cursor: pointer;
+  background-color: var(--red);
+  transition: background-color 300ms;
+}

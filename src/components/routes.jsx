@@ -1,20 +1,30 @@
-import App from "./App";
 import Home from "./Home";
 import Shop from "./Shop";
 import Cart from "./Cart";
+import Navbar from "./Navbar";
 
 const routes = [
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/shop",
-    element: <Shop />,
-  },
-  {
-    path: "/cart",
-    element: <Cart />,
+    element: (
+      <>
+        <Navbar />
+      </>
+    ),
+    children: [
+      {
+        path: "",
+        element: <Home />,
+      },
+      {
+        path: "cart",
+        element: <Cart />,
+      },
+      {
+        path: "shop",
+        element: <Shop />,
+      },
+    ],
   },
 ];
 
