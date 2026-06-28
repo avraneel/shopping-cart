@@ -1,8 +1,11 @@
 import styles from "../styles/Card.module.css";
 import btnStyles from "../styles/Button.module.css";
 import cartIcon from "../assets/cart.svg";
+import { useState } from "react";
 
 export default function Card({ item, state, setState }) {
+  const [qty, setQty] = useState(1);
+
   function addToCart(e) {
     e.preventDefault();
 
@@ -42,16 +45,26 @@ export default function Card({ item, state, setState }) {
         <h3>{item.title}</h3>
         <p>${item.price.toFixed(2)}</p>
         <form action="" className={styles.productForm} onSubmit={addToCart}>
-          <label htmlFor="qty" className={styles.qtyContainer}>
-            Quantity:{" "}
-            <input
-              type="number"
-              id="qty"
-              name="qty"
-              className={styles.qty}
-              defaultValue={1}
-            />
-          </label>
+          <div className={styles.quantity}>
+            <label htmlFor="qty">Quantity</label>
+            <div className={styles.quantityWidget}>
+              <button type="button" onClick={() => qty < 50 && setQty(qty + 1)}>
+                +
+              </button>
+              <input
+                type="number"
+                name="qty"
+                id="qty"
+                min={1}
+                max={50}
+                value={qty}
+                onChange={(e) => setQty(Number(e.target.value))}
+              />
+              <button type="button" onClick={() => qty > 1 && setQty(qty - 1)}>
+                -
+              </button>
+            </div>
+          </div>
           <button className={btnStyles.cartBtn} type="submit">
             <img
               src={cartIcon}

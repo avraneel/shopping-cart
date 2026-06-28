@@ -24,11 +24,32 @@
   justify-content: space-between;
 }
 
-.qtyContainer {
+.quantity {
   display: flex;
-  gap: 0.5rem;
   align-items: center;
-  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.quantityWidget {
+  display: flex;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.quantityWidget button {
+  padding: 0.5rem;
+  border: none;
+}
+
+.quantityWidget input {
+  border: none;
+}
+
+.quantityWidget button:hover {
+  background-color: #5a5a5a;
+  color: var(--white);
+  transition: 300ms;
 }
 
 .productForm {
@@ -41,12 +62,6 @@
 input {
   padding: 0.5rem;
   background-color: var(--silver);
-  width: 50%;
-}
-
-.qty {
-  border: none;
-  border-radius: var(--btn-radius);
 }
 
 .cardText h3 {
@@ -56,4 +71,16 @@ input {
 .cartIcon {
   max-width: none;
   flex-shrink: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }

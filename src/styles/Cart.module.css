@@ -13,6 +13,13 @@
     "itemList itemList checkout"
     "itemList itemList space"
     "itemList itemList space";
+
+  @media (width < 500px) {
+    grid-template-areas:
+      "itemList"
+      "bill"
+      "checkout";
+  }
 }
 
 table {
