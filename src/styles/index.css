@@ -25,6 +25,8 @@ source {
   max-width: 100%;
 }
 
+/* End Reset */
+
 :root {
   --light-red: hsla(0, 48%, 80%, 0.35);
   --red: #ff4444;
