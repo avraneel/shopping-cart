@@ -1,4 +1,6 @@
 .cart {
+  display: flex;
+  flex-direction: column;
   padding: 2rem;
   background-color: var(--silver);
 }
@@ -29,6 +31,10 @@ table {
 th,
 td {
   padding: 2rem;
+
+  @media (max-width: 500px) {
+    padding: 0.5rem;
+  }
 }
 
 th {
@@ -81,4 +87,31 @@ th {
   cursor: pointer;
   background-color: var(--red);
   transition: background-color 300ms;
+}
+
+@media (max-width: 500px) {
+  .cart {
+    align-items: center;
+  }
+
+  th,
+  td {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .itemList {
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .bill {
+    padding: 1rem;
+    gap: 1rem;
+    align-items: center;
+  }
 }

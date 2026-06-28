@@ -3,6 +3,10 @@
   display: flex;
   overflow: hidden;
   background-color: var(--white);
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 }
 
 .cardImage {

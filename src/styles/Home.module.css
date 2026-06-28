@@ -24,6 +24,10 @@
   text-align: center;
   text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.6);
   font-weight: 300;
+
+  @media (max-width: 500px) {
+    font-size: 3rem;
+  }
 }
 
 .homeText {
@@ -32,4 +36,8 @@
   color: var(--white);
   font-weight: 300;
   text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.6);
+
+  @media (max-width: 500px) {
+    font-size: 1rem;
+  }
 }
